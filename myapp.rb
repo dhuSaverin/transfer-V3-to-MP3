@@ -14,6 +14,12 @@ post '/upload' do
   file = "files/#{filename}"
   mp3_filename = filename.split('.').first + '.mp3'
   target = "files/#{mp3_filename}"
+
+  if File::exist?(target)
+    f = File.open(target)
+    File.delete(f)
+    puts 'file deleted'
+  end
   File.open(file, 'wb') do |f|
     f.write tempfile.read
     `ffmpeg -i #{file} #{target}`
@@ -25,9 +31,5 @@ post '/upload' do
   ensure
     f.close
   end
-
-  f = File.open(target)
-  File.delete(f)
-  puts 'file deleted'
 
 end
