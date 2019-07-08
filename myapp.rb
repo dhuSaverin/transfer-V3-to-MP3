@@ -23,10 +23,11 @@ post '/upload' do
     f = File.open(target)
     send_file(f, filename: mp3_filename)
   ensure
-    sleep 5
     f.close
-    File.delete(f)
-    puts 'file deleted'
   end
+
+  f = File.open(target)
+  File.delete(f)
+  puts 'file deleted'
 
 end
