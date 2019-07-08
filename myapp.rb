@@ -25,6 +25,7 @@ post '/upload' do
   ensure
     f.close
     File.delete(f)
+    puts 'file deleted'
   end
 
 end
