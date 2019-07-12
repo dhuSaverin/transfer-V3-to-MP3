@@ -1,14 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+
   <title>在线V3转mp3</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="team" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/tooplate-style.css">
+
 </head>
 <body>
-<form action="/upload" method="post" enctype="multipart/form-data">
-  <input type="file" name="file" file />
-  <input type="submit" />
-</form>
 
+<!-- PRE LOADER -->
+<section class="preloader">
+  <div class="spinner">
+
+    <span class="spinner-rotate"></span>
+
+  </div>
+</section>
+
+
+<!-- MENU -->
+<section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+      </button>
+
+      <!-- lOGO TEXT HERE -->
+      <a href="index.html" class="navbar-brand">SJT</a>
+    </div>
+
+    <!-- MENU LINKS -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#home" class="smoothScroll">Home</a></li>
+        <li><a href="#feature" class="smoothScroll">Features</a></li>
+        <li><a href="#about" class="smoothScroll">About us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Say hello - <span>sjtdhu@163.com</span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FEATURE -->
+<section id="home" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-offset-3 col-md-6 col-sm-12">
+        <div class="home-info">
+          <h3>劲桐在线V3转mp3工具</h3>
+          <h1>祝您工作愉快！</h1>
+          <form action="/upload" method="post" class="online-form" enctype="multipart/form-data">
+            <input type="text" id="file_click" class="form-control" placeholder="选择你的文件" required="">
+            <input type="file" id="file" name="file" file style="display: none" />
+            <button type="submit" class="form-control">Get started</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
