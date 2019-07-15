@@ -14,7 +14,9 @@ post '/upload' do
   file = "files/#{filename}"
   mp3_filename = filename.split('.').first + '.mp3'
   target = "files/#{mp3_filename}"
-
+  if file.split('.').last != 'V3'
+    return '文件类型只能为只能为音频文件！！！'
+  end
   if File::exist?(target)
     f = File.open(target)
     File.delete(f)
