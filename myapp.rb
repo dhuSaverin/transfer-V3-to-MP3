@@ -14,7 +14,7 @@ post '/upload' do
   file = "files/#{filename}"
   mp3_filename = filename.split('.').first + '.mp3'
   target = "files/#{mp3_filename}"
-  if file.split('.').last != 'V3'
+  unless %w(V3 CD WAVE AIFF MEPG MP3 MPEG-4 MIDI WMA REALAUDIO VQF OGGVORBIS AMR APE FLAC AAC).include?(file.split('.').last.upcase)
     return '文件类型只能为只能为音频文件！！！'
   end
   if File::exist?(target)
